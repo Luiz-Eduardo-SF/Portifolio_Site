@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Quicksand:wght@300..700&display=swap');
+:root{
+    --principal-background-color: #e3e6e6;
+    --principal-font-color:#f5f8f8;
+    --principal-background-div: #2a3043;
+    --principal-background-div-alpha: #191e30ff;
+
+    --secondary-background-div: #3f4e88;
+
+    --shadow-color:black;
+    --distant-color: #d68328;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    color:var(--principal-font-color);
+}
+
+header{
+    position:fixed;
+    top:0;
+    height:70px;
+    width:100vw;
+    max-width:100vw;
+    background-color: var(--principal-background-div);
+    box-shadow: 0 0 10px var(--shadow-color);
+    background: linear-gradient(145deg, var(--principal-background-div), var(--principal-background-div-alpha));
+
+    .logo{
+        position:absolute;
+        top:50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+}
+
+body{
+    background: var(--principal-background-color);
+}
+h1, h2, h3{
+    font-weight:700;
+}
+h1{
+    font-size:2em;
+}
+
+p{
+    font-size:1.2em;
+}
+
+hr{
+    margin:20px 0 20px 0;
+    height:1px;
+    width:100%;
+    background-color:var(--distant-color);
+    border:none;
+}
+
+section{
+    background: linear-gradient(145deg, var(--principal-background-div), var(--principal-background-div-alpha));
+    margin-top:30px;
+    padding:50px 20px;
+    text-align:center;
+
+    box-shadow:0 0 13px var(--shadow-color);
+}
+
+
+.section1{
+    margin-top:100px;
+    background-attachment:fixed;
+
+    h1{
+        margin-bottom:20px;
+    }
+    p{
+        margin-bottom:5px;
+    }
+}
+
+.section2{
+    background: var(--secondary-background-div);
+    h2{margin-bottom:20px;}
+}
+
+.section3{
+    .courses{
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+
+        a{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+
+            box-shadow:0 0 12px var(--shadow-color);
+
+            text-decoration:none;
+            padding:20px;
+            height:300px;
+
+            hr{
+                margin:20px 0 20px 0;
+            }
+            p{
+                margin-bottom:5px;
+            }
+        }
+    }
+}
+
+.section5{
+    p{margin:10px 0;}
+}
