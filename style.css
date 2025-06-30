@@ -5,7 +5,8 @@
   --principal-background-div: #2a3043;
   --principal-background-div-alpha: #191e30ff;
   --secondary-background-div: #3f4e88;
-  --shadow-color:black;
+  --dark-shadow-color:black;
+  --light-shadow-color:#3f4e88;
   --distant-color: #d68328;
 }
 
@@ -49,7 +50,7 @@ header {
   width: 100vw;
   max-width: 100vw;
   background-color: var(--principal-background-div);
-  box-shadow: 0 0 10px var(--shadow-color);
+  box-shadow: 0 0 10px var(--dark-shadow-color);
   background: linear-gradient(145deg, var(--principal-background-div), var(--principal-background-div-alpha));
 }
 header .logo {
@@ -65,21 +66,18 @@ section {
   padding: 50px 20px;
   text-align: center;
   width: 100%;
-  box-shadow: 0 0 13px var(--shadow-color);
+  box-shadow: 0 0 13px var(--dark-shadow-color);
 }
 
 .section1 {
+  display: flex;
   margin-top: 100px;
-  background-attachment: fixed;
 }
 .section1 h1 {
   margin-bottom: 20px;
 }
 .section1 p {
   margin-bottom: 5px;
-}
-.section1 .perfil_photo {
-  display: none;
 }
 
 .section2 {
@@ -103,7 +101,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 0 12px var(--shadow-color);
+  box-shadow: 0 0 12px var(--dark-shadow-color);
   text-decoration: none;
   padding: 20px;
   height: 300px;
@@ -119,7 +117,22 @@ section {
   margin: 10px 0;
 }
 
-@media (min-width: 1035px) {
+@media (max-width: 767px) {
+  .section1 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .section1 .perfil_photo {
+    margin-bottom: 50px;
+  }
+  .section1 .perfil_photo img {
+    border-radius: 50%;
+    border: 1px solid var(--light-shadow-color);
+    filter: drop-shadow(0 0 20px var(--light-shadow-color));
+  }
+}
+@media (min-width: 767px) {
   .section1 {
     position: absolute;
     z-index: 5;
@@ -139,10 +152,6 @@ section {
   }
   .section1 .perfil h1 {
     margin: 0;
-  }
-  .section1 .perfil_photo {
-    display: flex;
-    height: 340px;
   }
   .section2 {
     position: absolute;
@@ -167,7 +176,7 @@ section {
   .section3 .courses .buttons {
     flex-direction: row;
     justify-content: space-between;
-    height: 400px;
+    height: 450px;
   }
   .section3 .courses .buttons a {
     width: 33%;
